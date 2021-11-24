@@ -1,0 +1,29 @@
+*{
+    margin: 0,0;
+}
+.myAuthBack{
+    background-image: url('https://wallpaperaccess.com/full/4278961.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    height: 100vh;
+    width: 100vw;
+    position:absolute;
+}
+
+.myForm{
+    width: 40%;
+    margin: auto auto;
+    border: 1px solid yellow;
+    margin-top: 15vh;
+    background-image: linear-gradient(45deg, rgba(255, 255, 0, 0.8), rgba(255, 166, 0, 0.8));
+}
+
+@media screen and (max-width: 968px) {
+    .myAuthBack{
+        background-image: url('https://wallpaperaccess.com/full/1579989.jpg');
+    }
+    .myForm{
+        width: 90%;
+        margin-top: 10vh;
+    }
+}

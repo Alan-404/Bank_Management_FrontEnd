@@ -1,0 +1,38 @@
+<div class="myHeader px-5">
+    <nav class="navbar navbar-light bg-info">
+        <div class="container-fluid">
+    
+          <div>
+            <img class="myLogo mx-3" src="https://logodix.com/logo/871233.png"/>
+            <a class="navbar-brand mt-2">ALPO BANK</a>
+          </div>
+  
+    
+    
+          <div class="btn-group">
+            <button type="button" class="btn btnInfor btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="myAvatar" [src]="authResponse.user.avatar"/>
+                {{authResponse.user.firstName + " " + authResponse.user.middleName + " " + authResponse.user.lastName}}
+            </button>
+            <ul class="dropdown-menu">
+                <li><button (click)="myInforPage()" class="dropdown-item" type="button">My Information</button></li>
+                <li><button (click)="logoutAccount()" class="dropdown-item" type="button">Logout</button></li>
+            </ul>
+          </div>
+
+
+          
+        </div>
+    </nav>
+    
+    <div class="list-group d-flex flex-row text-center">
+        <a routerLink="dashboard" class="list-group-item list-group-item-action">Home</a>
+        <a href="#" class="list-group-item list-group-item-action">News</a>
+        <a href="#" class="list-group-item list-group-item-action">Stock</a>
+        <a *ngIf = "authResponse.user.role==1" href="#" class="list-group-item list-group-item-action">Admin</a>
+    </div>  
+    
+    <div *ngIf = "showLogin">
+      <button class="btn">Login Account</button>
+    </div>
+</div>

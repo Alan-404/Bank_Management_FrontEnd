@@ -1,0 +1,21 @@
+.myLogo, .myAvatar{
+    width: 3rem;
+    height: 3rem;
+}
+
+.myAvatar{
+    border-radius: 50%;
+}
+
+.btnInfor{
+    background: none;
+    border:none;
+}
+
+.myHeader{
+    position:absolute;
+    top: 2vh;
+    width: 100%;
+    margin: auto auto;
+    border-radius: 10px;
+}

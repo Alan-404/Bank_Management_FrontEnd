@@ -1,0 +1,21 @@
+<div>
+
+    <h1 class="text-center">Login Account</h1>
+    <div *ngIf ="showAlert" class="alert alert-danger" role="alert">
+        {{message}}
+    </div>
+    <hr />
+    <div class="form-floating mb-3">
+        <input (keyup)="getInput($event)" name = "email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input (keyup)="getInput($event)" name = "password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+    </div>
+
+    <button (click)="loginAccount()" type="button" class="btn btn-success">Login</button>
+
+
+</div>
+<app-spinner *ngIf = "showSpinner"></app-spinner>

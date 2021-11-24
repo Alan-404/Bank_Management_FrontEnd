@@ -1,0 +1,16 @@
+<div>
+
+    <div id="carouselExampleControls" class="carousel slide mySlideshow" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+          <div *ngFor="let banner of bannerResposne.banners; let index = index; let isFirst = first" [ngClass]="{active:isFirst}" class="carousel-item active myBanner">
+            <img [src]="banner.image" class="myBanner" alt="...">
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>

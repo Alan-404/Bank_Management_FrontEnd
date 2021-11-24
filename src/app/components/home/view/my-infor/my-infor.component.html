@@ -1,0 +1,43 @@
+<div class = "inforForm p-5">
+    <div class="d-flex justify-content-between">
+        <h2 class="pt-3 text-warning">ALPO BANK</h2>
+        <img class="myQR" src="https://s3-ap-southeast-1.amazonaws.com/kipalog.com/lhwp30bpuo_image.png"/>
+    </div>
+    <hr />
+    
+    <div class="d-flex">
+        <img class="ava" [src]="authResponse.user.avatar"/>
+        <div>
+            <div>
+                <div class="d-flex justify-content-between">
+                    <div class="text-light mx-5">
+                        <h3>Full Name</h3>
+                        <p class="h3 myInfor">{{authResponse.user.firstName + " " + authResponse.user.middleName + " " + authResponse.user.lastName}}</p>
+                    </div>
+        
+                    <div class="text-light mx-5">
+                        <h3>Birth Date</h3>
+                        <p class="h3 myInfor">{{bDate}}</p>
+                    </div>
+    
+                    <div class="text-light mx-5">
+                        <h3>Phone</h3>
+                        <p class="h3 myInfor">{{showPhone + hiddenPhone}}</p>
+                    </div>
+                </div>
+    
+                <div class="text-light mx-5 d-flex flex-row my-4">
+                    <h3>Address: </h3>
+                    <p class="h3 myInfor mx-4">{{authResponse.user.address}}</p>
+                </div>
+    
+                <div class="text-light mx-5 d-flex flex-row my-4">
+                    <h3>Email: </h3>
+                    <p class="h3 myInfor mx-4">{{authResponse.user.email}}</p>
+                </div>
+            </div>
+            <button class="mx-5 btnEdit p-3">Edit Profile</button>
+        </div>       
+    </div>
+    
+</div>
